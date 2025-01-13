@@ -15,7 +15,9 @@ export default defineNuxtConfig({
             options: {
               scrollBehaviorType: 'smooth'
             }
-        }
+        },
+        baseURL: process.env.NODE_ENV === 'production' ? '/nuxt_product_demo/' : '/',
+        buildAssetsDir: '/static/'
 	},
 
 	css: ['@/assets/styles/main.scss', 'swiper/swiper-bundle.css'],

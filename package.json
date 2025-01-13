@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^5.3.5",
@@ -20,6 +21,7 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.75.0"
   }
 }
