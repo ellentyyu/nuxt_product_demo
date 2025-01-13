@@ -12,13 +12,10 @@ export default defineNuxtConfig({
             ]
         },
         router: {
-            base: '/nuxt_product_demo/',
             options: {
               scrollBehaviorType: 'smooth'
             }
-        },
-        baseURL: process.env.NODE_ENV === 'production' ? '/nuxt_product_demo/' : '/',
-        buildAssetsDir: '/static/'
+        }
 	},
 
 	css: ['@/assets/styles/main.scss', 'swiper/swiper-bundle.css'],
