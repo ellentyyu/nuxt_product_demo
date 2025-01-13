@@ -1,6 +1,0 @@
-const FooterLight_vue_vue_type_style_index_0_scoped_69d1124a_lang = ".footer[data-v-69d1124a]{background-color:#ededed;color:#9e9e9e}@media (max-width:767px){.footer.product-padding[data-v-69d1124a]{padding-bottom:98px}}.footer__wrapper[data-v-69d1124a]{align-items:center;display:flex;justify-content:center;padding-bottom:29px;padding-top:29px}@media (max-width:767px){.footer__wrapper[data-v-69d1124a]{padding-bottom:14px;padding-top:14px}}.footer a[data-v-69d1124a]{color:#511289;font-size:18px;font-weight:800;line-height:26px}.footer a[data-v-69d1124a],.footer img[data-v-69d1124a]{margin-left:10px;margin-right:10px}.footer img[data-v-69d1124a]{height:15px;-o-object-fit:cover;object-fit:cover;width:60px}@media (max-width:767px){.footer img[data-v-69d1124a]{height:12px;margin-left:5px;margin-right:5px;width:47px}}.footer p[data-v-69d1124a]{font-size:14px;font-weight:400;line-height:19px}@media (max-width:767px){.footer p[data-v-69d1124a]{font-size:10px;line-height:14px}}.footer span[data-v-69d1124a]{display:inline-block}";
-
-const FooterLightStyles_YGdenv8o = [FooterLight_vue_vue_type_style_index_0_scoped_69d1124a_lang];
-
-export { FooterLightStyles_YGdenv8o as default };
-//# sourceMappingURL=FooterLight-styles.YGdenv8o.mjs.map
