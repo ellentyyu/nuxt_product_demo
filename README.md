@@ -1,4 +1,5 @@
 # Nuxt 3 商品瀏覽/ 報名專案 demo
+demo site: https://nuxt-product-demo.onrender.com/
 
 ## Node version
 v20.11.0
