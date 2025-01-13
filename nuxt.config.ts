@@ -12,6 +12,7 @@ export default defineNuxtConfig({
             ]
         },
         router: {
+            base: '/nuxt_product_demo/',
             options: {
               scrollBehaviorType: 'smooth'
             }
