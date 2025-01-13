@@ -1329,7 +1329,8 @@ export default defineEventHandler(async (event) => {
         },
     ];
     const { id } = getQuery(event);
-
+    console.log('api', id);
+    
     if (id) {
         return DUMMY_DATA.find(product => product.id === id);
     }

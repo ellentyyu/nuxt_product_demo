@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export const useProductStore = defineStore('product', () => {
     // 首頁輪播
@@ -92,9 +93,14 @@ export const useProductStore = defineStore('product', () => {
         isMoreProductLoading.value = false;
     }
     async function getProductDetailData (id) {
+        const router = useRouter();
         try {         
-            const product = await $fetch(`/listProductData?id=${id}`);            
-            seoData.value = product;
+            const product = await $fetch(`/listProductData?id=${id}`);
+            if (!product) {
+                router.push('/');
+            } else {
+                seoData.value = product;
+            }
         } catch (error) {
             console.error(error);
         }
