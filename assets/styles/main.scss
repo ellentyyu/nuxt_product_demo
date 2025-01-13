@@ -1,0 +1,10 @@
+@import "./variables";
+@import 'bootstrap/scss/bootstrap';
+@import "./reset";
+@import "./utils";
+@import "./banner";
+
+/* 
+modal 彈窗及表單有用到少部分 bootstrap 樣式
+其餘自己撰寫的 class 要注意最基本款的命名 (如 .container, .progress-bar) 可能會跟 bootstrap 重複
+*/

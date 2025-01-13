@@ -1,0 +1,171 @@
+.review {
+    margin-bottom: 12px;
+    padding: 0 16px;
+
+    &.readmore {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 32px;
+
+        @media (max-width: 767px) {
+            display: block;
+            padding: 0 16px;
+        }
+
+        &.readmore {
+            padding: 16px 16px 0;
+        }
+    }
+
+    &__card {
+        position: relative;
+        width: 32.5%;
+        margin-bottom: 16px;
+        border-radius: 12px;
+        border: #ededed solid 1px;
+
+        &.empty {
+            border: none;
+        }
+
+        &.test {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            /* 可以看要不要統一 */
+            margin-bottom: 12px;
+        }
+
+        &:last-child {
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 240px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        object-fit: cover;
+        object-position: center;
+
+        @media (max-width: 767px) {
+            height: 187px;
+        }
+    }
+    
+    &__img-tag {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: flex;
+        align-items: center;
+        padding: 2px 8px 2px 2px;
+        background-color: #fff4eb;
+        border: #ff673f 1.2px solid;
+        border-radius: 20px;
+
+        i {
+            width: 20px;
+            height: 20px;
+            margin-right: -2px;
+            background-image: url("@/assets/images/icon-fire.gif");
+            background-size: cover;
+            background-position: center;
+        }
+
+        img {
+            width: 50px;
+            height: 12px;
+        }
+    }
+
+    &__body {
+        padding: 0 16px 12px;
+
+        h3 {
+            display: -webkit-box;
+            overflow: hidden;
+            height: 52px;
+            @include fs-18;
+            font-weight: 500;
+            color: #424242;
+            text-overflow: ellipsis;
+            visibility: visible;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    &__detail-wrapper {
+        display: flex;
+        align-items: flex-end;
+        margin-top: -24px;
+        margin-bottom: 4px;
+
+        img {
+            width: 48px;
+            height: 48px;
+            margin-right: 4px;
+            border-radius: 50%;
+            border: #fff 1px solid;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        p {
+            @include fs-14;
+            color: #616161;
+        }
+    }
+
+    &__readmore-wrapper {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        h4 {
+            @include fs-16;
+            font-weight: 500;
+            color: #0a0a0a;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            align-items: center;
+
+            p {
+                @include fs-14;
+                color: $primary-orange;
+            }
+
+            i {
+                width: 24px;
+                height: 24px;
+                background-image: url("@/assets/images/icon-double-arrow-right-orange.svg");
+            }
+        }
+    }
+}

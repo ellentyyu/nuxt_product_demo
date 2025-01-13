@@ -1,0 +1,114 @@
+.carousel {
+    --gap: 12px;
+    margin-bottom: 16px;
+    padding: 16px 0;
+    border-bottom: #e0e0e0 1px solid;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        margin-bottom: 0;
+        padding: 12px 0;
+        border-color: #ededed;
+    }
+    
+    &__wrapper {
+        display: flex;
+        width: fit-content;
+        gap: var(--gap);
+        animation-name: marquee;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-50% - .5 * var(--gap)));
+        }
+    }
+
+    .swiper {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+            max-height: 38px;
+            padding: 0 8px;
+        }
+    }
+
+    .swiper-slide,
+    &__card {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border: #c2c2c2 1px solid;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .swiper-slide {
+        height: 38px;
+    }
+
+    &__card {
+        flex-shrink: 0;
+        width: auto;
+    }
+
+    &__star-wrapper {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding: 6px 8px 6px 4px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        background-color: #fff8d9;
+
+        i {
+            width: 24px;
+            height: 24px;
+            background-image: url("@/assets/images/icon-star.gif");
+            background-size: cover;
+            background-position: center;
+        }
+
+        p {
+            font-weight: 500;
+            @include fs-16;
+            color: #7e6200;
+        }
+    }
+
+    &__title-wrapper {
+        padding: 6px 8px;
+    }
+
+    &__title {
+        flex-shrink: 0;
+        overflow: hidden;
+        font-weight: 500;
+        @include fs-16;
+        color: #424242;
+
+        @media (max-width: 767px) {
+            height: 24px;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            visibility: visible;
+            white-space: normal;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
